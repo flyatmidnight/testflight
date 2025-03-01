@@ -30,7 +30,6 @@ module.exports = {
           600: '#0d0d0d',
         },
         white: '#fff',
-        blue: '#21325b',
         theme: '#000c00',
         button: '#4C9DDF',
         'warning-light': '#EBC7C7',
