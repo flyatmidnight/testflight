@@ -171,9 +171,8 @@ const Search = ({ header = false }) => {
 
       <Combobox className="flex-grow">
         <ComboboxInput
-          placeholder={t('search.placeholder')}
+          placeholder={t('search.placeholder') as string}
           className="search bg-white dark:bg-black-600 dark:text-neargray-10 w-full h-full text-sm px-4 py-3 outline-none dark:border-black-200 border-l border-t border-b md:border-l-0 rounded-l-lg rounded-r-none md:rounded-l-none"
-          /* onChange={handleChange} */
         />
         {showResults && (
           <ComboboxPopover className="z-50 dark:bg-black-600">

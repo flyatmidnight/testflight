@@ -23,6 +23,14 @@ import fetcher from '@/utils/fetcher';
 const network = env('NEXT_PUBLIC_NETWORK_ID');
 const ogUrl = env('NEXT_PUBLIC_OG_URL');
 
+type PageWithProps = ReactElement & {
+  props?: {
+    statsDetails?: any;
+    latestBlocks?: any;
+    signedAccountId?: any;
+  };
+};
+
 export const getServerSideProps: GetServerSideProps<{
   statsDetails: any;
   chartDetails: any;
@@ -209,7 +217,7 @@ const HomePage = ({
   );
 };
 
-HomePage.getLayout = (page: ReactElement) => (
+HomePage.getLayout = (page: PageWithProps) => (
   <Layout
     statsDetails={page?.props?.statsDetails}
     latestBlocks={page?.props?.latestBlocks}
